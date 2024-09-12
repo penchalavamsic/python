@@ -1,0 +1,9 @@
+a=123
+sum=0
+pro=1
+while(a!=0):
+    n=a%10
+    sum=sum+n
+    pro=pro*n
+    a=a//10
+print(sum,pro)
