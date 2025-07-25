@@ -1,0 +1,288 @@
+#factorial
+def fact(n):
+	if(n==1):
+		return 1
+	else:
+		return n*(n-1)
+print(fact(5))
+
+
+#simple Interest
+si=(ptr)/100
+
+
+#compound interest
+ci=amount-principal
+amount=prinicpal((1+r)/100)pow(t)
+
+def compound_interest(principal, rate, time):
+    Amount = principal * (pow((1 + rate / 100), time))
+    CI = Amount - principal
+    print("Compound interest is", CI)
+compound_interest(10000, 10.25, 5)
+
+
+#armstong
+a=int(input())
+temp=a
+b=0
+c=0
+n=len(str(a))
+while temp>0:
+    c=temp%10
+    b=b+(c**n)
+    temp=temp//10
+if(b==a):
+    print("armstong")
+else:
+    print("not armstong")
+
+
+#prime number
+
+start=int(input())
+end=int(input())
+for num in range(start, end+1):
+    if num>1:
+        for i in range(2, num):
+            if num%i==0:
+                break
+        else:
+         print(num)
+
+#prime check
+
+a = int(input("Enter a number: "))
+
+if a > 1:
+    for i in range(2, a):
+        if a % i == 0:
+            print("Not prime")
+            break
+    else:
+        print("Prime")
+else:
+    print("Not prime")
+
+
+#fibonacci series
+
+a=0
+b=1
+n=int(input())
+for i in range(n):
+    print(a)
+    a, b=b, a+b
+
+#fibonacci checking
+a=0
+b=1
+n=int(input())
+c=int(input())
+temp=[]
+for i in range(n):
+    temp.append(a)
+    a, b=b, a+b
+   
+if c in temp:
+    print("Fibonaci")
+else:
+    print("Not fibonaci")
+
+
+#sum of array
+a=int(input())
+arr=[]
+for i in range(a):
+    num=int(input())
+    arr.append(num)
+print(sum(arr))
+
+
+#largest value in array
+a=[1,6,9,10]
+large=a[0]
+for value in a:
+    if value>large:
+        large=value
+print(large)
+
+#array reversing rotations
+a=[]
+n=int(input())
+for i in range(n):
+    num=int(input())
+    a.append(num)
+b=a[1:]+a[:1]
+print(b)
+
+#Python Program to Split the array and add the first part to the end
+a=[1,2,3,5]
+k=int(input())
+b=a[k:]+a[:k]
+print(b)
+
+#Python Program to Find remainder of array multiplication divided by n using
+a=[1,2,3,5]
+k=int(input())
+b=len(a)
+c=1
+for i in a:
+    c=c*i
+print(c/k)
+
+
+#Python Program to check if given array is Monotonic
+a=[2,1,3,5]
+inc=True
+dec=True
+for i in range(1, len(a)):
+    if a[i]>a[i-1]:
+        dec=False
+    if a[i]<a[i-1]:
+        inc=False
+if dec or inc:
+    print("Monotonic")
+else:
+    print("Non Monotonic")
+
+
+#array transpose
+a=[
+    [1,2,3],
+    [3,5,6]
+    ]
+row=len(a)
+col=len(a[0])
+
+trans=[]
+for i in range(col):
+    new=[]
+    for j in range(row):
+        new.append(a[j][i])
+    trans.append(new)
+
+print(trans)
+
+
+#swaping first and last in list
+myl=[]
+num=int(input())
+for i in range(num):
+    a=int(input())
+    myl.append(a)
+myl[0],myl[-1]=myl[-1],myl[0]
+print(myl)
+
+
+#reversing list
+a=[1,5,6,4]
+a.reverse()
+print(a)
+#method2
+print(a[::-1])
+
+#sum of numbers in list
+a=[1,2,3,4]
+b=0
+for i in a:
+    b += i
+    
+print(b)
+
+#largest in list
+a=[1,2,3,5]
+large=a[0]
+for value in a:
+    if value>large:
+        large=value
+print(large)
+
+#smallest in list
+a=[1,0,3,5]
+large=a[0]
+for value in a:
+    if value<large:
+        large=value
+print(large)
+
+
+#second largest in list
+a=[1,2,6,8]
+a.sort()
+print(a[-2])
+
+#n largest in list
+a=[1,2,6,8]
+a.sort()
+i=int(input())
+print(a[-i])
+
+#even numbers in list
+a=[10,2,6,8]
+for i in a:
+    if i%2==0:
+        print(i)
+
+#odd numbers in a list
+a=[3,2,6,8]
+for i in a:
+    if i%2 != 0:
+        print(i)
+
+#duplicates elements in list
+a=[1,2,5,6,5,3]
+dup=[]
+seen=set()
+for i in a:
+    if i in seen and i not in dup:
+        dup.append(i)
+    else:
+        seen.add(i)
+        
+print(dup)
+        
+#matrix addition
+a=[[1,5,6],[1,5,6]]
+b=[[1,5,6],[1,5,6]]
+res=[[0,0,0],[0,0,0]]
+for i in range(len(a)):
+    for j in range(len(a[0])):
+        res[i][j]=a[i][j]+b[i][j]
+for r in res:
+    print(r)
+
+
+
+import numpy as np
+a=np.array([[1,5,6],[1,5,6]])
+b=np.array([[1,5,6],[1,5,6]])
+c=a+b
+print(c)
+
+
+#string palindrome
+s="oyo"
+b=s[::-1]
+if b==s:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+#Reverse Words in a Given String in Python
+s="hello world"
+b=s.split()
+rever=b[::-1]
+rev=" ".join(rever)
+print(rev)
+
+#Remove Letters From a String in Python
+s="hello world"
+b=s.replace("e"," ")
+print(b)
+
+
+#ascii value
+a=input()
+print(ord(a))
+
